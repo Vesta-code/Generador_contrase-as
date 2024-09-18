@@ -11,7 +11,7 @@ body {
     display: flex; 
     align-items: center;
     justify-content: center;
-    
+
 }
 
 body::before {
@@ -52,7 +52,7 @@ body::before {
 .container__informacion {
     flex: 1;
     padding: 3rem;
-    
+
 }
 
 h1 {
@@ -68,7 +68,7 @@ h1 {
     margin: 12px 0;
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .container__texto-azul {
@@ -105,7 +105,7 @@ h1 {
     font-size: 24px;
     font-weight: 700;
     font-family: 'Inter', sans-serif;
-    
+
 }
 
 .boton{
@@ -137,3 +137,42 @@ h1 {
 
 
 
+/* Estilo para el label que muestra el estado de la contraseña */
+.password-strength-label {
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    margin-left: 50px;
+}
+
+
+/* Estilo para la barra de progreso */
+.password-strength {
+    display: none;
+    width: 496px;
+    height: 20px;
+    background-color: #e0e0e0; /* Fondo gris claro para la barra */
+    border-radius: 10px;
+    margin-left: 50px;
+    position: relative;
+}
+
+/* Inicialmente sin progreso */
+#progress-bar {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.3s, background-color 0.3s;
+}
+
+/* Colores específicos para cada estado */
+.weak {
+    background-color: red; /* Color rojo para contraseñas débiles */
+}
+
+.medium {
+    background-color: #ffe44d; /* Color mostaza para contraseñas medias */
+}
+
+.strong {
+    background-color: green; /* Color verde para contraseñas fuertes */
+}
